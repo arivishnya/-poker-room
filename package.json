@@ -1,0 +1,43 @@
+{
+  "name": "poker-room",
+  "version": "0.0.0",
+  "description": "poker room",
+  "author": "arivishnya",
+  "main": "index.js",
+  "scripts": {
+    "room:deploy:remote": "lftp ftp://anonymous:@ -e \"set ssl:verify-certificate false; cd docs; put ./dist/room.js -o room.js; exit\"",
+    "room:build:deploy:remote": "npm run room && npm run room:deploy:remote",
+    "room": "npm version patch && webpack --config webpack.prod.js",
+    "dev": "webpack --config webpack.dev.js",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@babel/plugin-transform-regenerator": "^7.13.15",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/runtime": "^7.14.0",
+    "babel-loader": "^8.2.2",
+    "classnames": "^2.3.1",
+    "css-loader": "1.0.0",
+    "express": "4.17.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.0",
+    "terser-webpack-plugin": "^1.4.5",
+    "webpack": "4.44.1",
+    "webpack-bundle-analyzer": "^4.4.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-middleware": "3.7.2",
+    "webpack-hot-middleware": "2.25.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
+  }
+}

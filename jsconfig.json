@@ -1,0 +1,22 @@
+// {
+//   "include": ["src/*", "src"],
+//   "exclude": ["node_modules"],
+//   "compilerOptions": {
+//     "baseUrl": "./",
+//     "allowJs": true,
+//     "paths": {
+//       "@/*": ["src/*"],
+//       "@components/*": ["src/components/*"],
+
+//       // "@packages/*": ["src/packages*"],
+//       // "@widgets/*": ["src/components/widgets/*"],
+//       // "@api/*": ["src/API/*"],
+//       // "@constants/*": ["src/constants/*"],
+//       // "@utils/*": ["src/utils/*"],
+//       // "@errors/*": ["src/errors/*"],
+//       // "@pages/*": ["src/pages/*"],
+//       // "@layouts/*": ["src/layouts/*"],
+//       // "@providers/*": ["src/providers/*"]
+//     }
+//   }
+// }
